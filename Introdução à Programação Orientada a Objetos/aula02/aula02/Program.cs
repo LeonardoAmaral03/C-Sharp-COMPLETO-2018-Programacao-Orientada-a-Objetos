@@ -16,8 +16,7 @@ namespace curso {
             Console.Write("Quantidade em estoque: ");
             P.quantidadeEmEstoque = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Você digitou: " + P.nome + ", " + 
-                P.preco.ToString("F2", CultureInfo.InvariantCulture) + ", " + P.quantidadeEmEstoque);
+            Console.WriteLine("Você digitou: " + P);
 
             Console.ReadLine();
 
