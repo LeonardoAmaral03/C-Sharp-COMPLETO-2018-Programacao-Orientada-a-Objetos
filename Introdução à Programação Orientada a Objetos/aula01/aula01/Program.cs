@@ -6,7 +6,7 @@ namespace curso {
         static void Main(string[] args) {
 
             Triangulo X, Y;
-            double areaX, areaY, p;
+            double areaX, areaY;
 
             X = new Triangulo();
             Y = new Triangulo();
@@ -18,11 +18,8 @@ namespace curso {
             Y.b = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Y.c = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            p = (X.a + X.b + X.c) / 2.0;
-            areaX = Math.Sqrt(p * (p - X.a) * (p - X.b) * (p - X.c));
-
-            p = (Y.a + Y.b + Y.c) / 2.0;
-            areaY = Math.Sqrt(p * (p - Y.a) * (p - Y.b) * (p - Y.c));
+            areaX = X.area();
+            areaY = Y.area();
 
             Console.WriteLine("AREA DO TRIANGULO X: " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("AREA DO TRIANGULO Y: " + areaY.ToString("F4", CultureInfo.InvariantCulture));
