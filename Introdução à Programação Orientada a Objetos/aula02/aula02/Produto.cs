@@ -22,10 +22,12 @@ namespace curso {
         // método padrão da linguagem C# para converter um objeto para string
         public override string ToString() {
             return nome
-                + ", "
+                + ", R$ "
                 + preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + quantidadeEmEstoque;
+                + quantidadeEmEstoque
+                + " unidades, Total: R$ "
+                + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
 
     }
