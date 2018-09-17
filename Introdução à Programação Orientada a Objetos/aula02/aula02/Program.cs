@@ -5,17 +5,20 @@ namespace curso {
     class Program {
         static void Main(string[] args) {
 
-            int qte;
+            int qte, quantidadeEstoque;
+            string nome;
+            double preco;
             Produto P;
-            P = new Produto();
 
             Console.WriteLine("Digite os dados do produto:");
             Console.Write("Nome: ");
-            P.nome = Console.ReadLine();
+            nome = Console.ReadLine();
             Console.Write("Preço: ");
-            P.preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Quantidade em estoque: ");
-            P.quantidadeEmEstoque = int.Parse(Console.ReadLine());
+            quantidadeEstoque = int.Parse(Console.ReadLine());
+
+            P = new Produto(nome, preco, quantidadeEstoque);
 
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + P);
