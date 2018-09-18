@@ -3,43 +3,43 @@
 namespace curso {
     class Produto {
 
-        public string nome;
-        public double preco;
-        public int quantidadeEmEstoque;
+        public string Nome { get; private set; }
+        public double Preco { get; private set; }
+        public int QuantidadeEmEstoque { get; private set; }
 
         //Construtor
         public Produto(string nome, double preco, int quantidadeEmEstoque) {
-            this.nome = nome;
-            this.preco = preco;
-            this.quantidadeEmEstoque = quantidadeEmEstoque;
+            this.Nome = nome;
+            this.Preco = preco;
+            this.QuantidadeEmEstoque = quantidadeEmEstoque;
         }
 
         //Sobrecarga - permite definir mais de uma versão da mesma operação, diferencinado-as pela lista de parâmetros
         public Produto(string nome, double preco) {
-            this.nome = nome;
-            this.preco = preco;
-            this.quantidadeEmEstoque = 0;
+            this.Nome = nome;
+            this.Preco = preco;
+            this.QuantidadeEmEstoque = 0;
         }
 
         public double ValorTotalEmEstoque() {
-            return preco * quantidadeEmEstoque;
+            return Preco * QuantidadeEmEstoque;
         }
 
         public void RealizarEntrada(int quantidade) {
-            quantidadeEmEstoque += quantidade;
+            QuantidadeEmEstoque += quantidade;
         }
 
         public void RealizarSaida(int quantidade) {
-            quantidadeEmEstoque -= quantidade;
+            QuantidadeEmEstoque -= quantidade;
         }
 
         // método padrão da linguagem C# para converter um objeto para string
         public override string ToString() {
-            return nome
+            return Nome
                 + ", R$ "
-                + preco.ToString("F2", CultureInfo.InvariantCulture)
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + quantidadeEmEstoque
+                + QuantidadeEmEstoque
                 + " unidades, Total: R$ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }

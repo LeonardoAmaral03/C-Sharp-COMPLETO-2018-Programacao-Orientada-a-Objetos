@@ -15,30 +15,13 @@ namespace curso {
             nome = Console.ReadLine();
             Console.Write("Preço: ");
             preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            //Console.Write("Quantidade em estoque: ");
-            //quantidadeEstoque = int.Parse(Console.ReadLine());
+            Console.Write("Quantidade em estoque: ");
+            quantidadeEstoque = int.Parse(Console.ReadLine());
 
-            //P = new Produto(nome, preco, quantidadeEstoque);
-            P = new Produto(nome, preco);
+            P = new Produto(nome, preco, quantidadeEstoque);
+            //P = new Produto(nome, preco); Sobrecarga
 
-            Console.WriteLine();
-            Console.WriteLine("Dados do produto: " + P);
-
-            Console.WriteLine();
-            Console.Write("Digite a quantidade de produtos que entraram no estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            P.RealizarEntrada(qte);
-
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados: " + P);
-
-            Console.WriteLine();
-            Console.Write("Digite a quantidade de produtos que saíram do estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            P.RealizarSaida(qte);
-
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados: " + P);
+            Console.WriteLine(P.Nome);
 
             Console.ReadLine();
 
