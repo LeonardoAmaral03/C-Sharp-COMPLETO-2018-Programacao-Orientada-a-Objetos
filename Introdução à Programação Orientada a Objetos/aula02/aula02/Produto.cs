@@ -7,10 +7,18 @@ namespace curso {
         public double preco;
         public int quantidadeEmEstoque;
 
+        //Construtor
         public Produto(string nome, double preco, int quantidadeEmEstoque) {
             this.nome = nome;
             this.preco = preco;
             this.quantidadeEmEstoque = quantidadeEmEstoque;
+        }
+
+        //Sobrecarga - permite definir mais de uma versão da mesma operação, diferencinado-as pela lista de parâmetros
+        public Produto(string nome, double preco) {
+            this.nome = nome;
+            this.preco = preco;
+            this.quantidadeEmEstoque = 0;
         }
 
         public double ValorTotalEmEstoque() {
