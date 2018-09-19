@@ -6,7 +6,8 @@ namespace fix1 {
         static void Main(string[] args) {
 
             ContaBancaria conta;
-            string numConta, nomeTitular, resp;
+            string numConta, nomeTitular;
+            char resp;
             double depositoInicial, deposito, saque;
 
             Console.Write("Digite o número da conta: ");
@@ -14,9 +15,9 @@ namespace fix1 {
             Console.Write("Digite o nome do titular da conta: ");
             nomeTitular = Console.ReadLine();
             Console.Write("Haverá depósito inicial (s/n)? ");
-            resp = Console.ReadLine();
+            resp = char.Parse(Console.ReadLine());
 
-            if (resp == "s") {
+            if (resp == 's') {
                 Console.Write("Digite o valor do depósito inicial: ");
                 depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
