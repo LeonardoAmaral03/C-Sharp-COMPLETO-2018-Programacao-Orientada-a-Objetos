@@ -28,6 +28,10 @@ namespace fix3 {
                     if (mat[i, j] == X) {
                         l = i;
                         c = j;
+
+                        // parar de varrer matriz
+                        i = M;
+                        j = N;
                     }
                 }
             }
