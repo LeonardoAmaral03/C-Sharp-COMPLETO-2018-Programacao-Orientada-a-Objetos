@@ -10,11 +10,7 @@ namespace fix2 {
 
             int alugueis, quarto;
             string nome, email;
-            Estudante[] vetQuartos = new Estudante[10];
-
-            for (int i = 0; i < 10; i++) {
-                vetQuartos[i] = null;
-            }
+            Aluguel[] vetQuartos = new Aluguel[10];
 
             Console.Write("Quantos aluguéis serão registrados? ");
             alugueis = int.Parse(Console.ReadLine());
@@ -30,10 +26,12 @@ namespace fix2 {
                 Console.Write("Quarto: ");
                 quarto = int.Parse(Console.ReadLine());
 
-                vetQuartos[quarto] = new Estudante(nome, email);
+                vetQuartos[quarto] = new Aluguel(nome, email);
 
                 Console.WriteLine();
             }
+
+            Console.WriteLine("Quartos ocupados:");
 
             for (int i = 0; i < 10; i++) {
                 if (vetQuartos[i] != null) {

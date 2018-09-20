@@ -1,10 +1,10 @@
 ﻿namespace fix2 {
-    class Estudante {
+    class Aluguel {
 
         public string Nome { get; set; }
         public string Email { get; set; }
 
-        public Estudante(string nome, string email) {
+        public Aluguel(string nome, string email) {
             Nome = nome;
             Email = email;
         }
