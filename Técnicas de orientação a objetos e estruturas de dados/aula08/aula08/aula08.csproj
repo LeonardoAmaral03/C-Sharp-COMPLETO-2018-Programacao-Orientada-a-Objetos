@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06EE74A5-5BBC-4124-AD97-4046BEA92BD8}</ProjectGuid>
+    <ProjectGuid>{8C7E4146-E2A2-491D-B4D8-0B7AD49C190D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>aula07</RootNamespace>
-    <AssemblyName>aula07</AssemblyName>
+    <RootNamespace>aula08</RootNamespace>
+    <AssemblyName>aula08</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Figura.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retangulo.cs" />
-    <Compile Include="Tela.cs" />
-    <Compile Include="Triangulo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
