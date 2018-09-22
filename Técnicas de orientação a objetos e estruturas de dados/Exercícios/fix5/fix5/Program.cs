@@ -10,6 +10,7 @@ namespace fix5 {
             HashSet<int> A = new HashSet<int>();
             HashSet<int> B = new HashSet<int>();
             HashSet<int> C = new HashSet<int>();
+            HashSet<int> Novo = new HashSet<int>();
 
             for (int i = 0; i < 3; i++) {
                 Console.Write("O curso " + cursos[i] + " possui quantos alunos? ");
@@ -31,10 +32,11 @@ namespace fix5 {
                 }
             }
 
-            B.UnionWith(C);
-            A.UnionWith(B);
+            Novo.UnionWith(A);
+            Novo.UnionWith(B);
+            Novo.UnionWith(C);
 
-            Console.Write("Total de alunos: " + A.Count);
+            Console.Write("Total de alunos: " + Novo.Count);
 
             Console.ReadLine();
         }
