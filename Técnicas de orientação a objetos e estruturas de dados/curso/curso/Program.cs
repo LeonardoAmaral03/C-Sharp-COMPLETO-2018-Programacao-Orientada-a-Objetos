@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using curso.dominio;
 
 namespace curso {
@@ -40,7 +37,12 @@ namespace curso {
                         Tela.MostrarProdutos();
                         break;
                     case 2:
-
+                        try {
+                            Tela.CadastrarProduto();
+                        }
+                        catch (Exception e) {
+                            Console.WriteLine("Erro inesperado: " + e.Message);
+                        }
                         break;
                     case 3:
 

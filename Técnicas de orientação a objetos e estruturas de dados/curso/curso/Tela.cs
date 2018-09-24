@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using curso.dominio;
 
 namespace curso {
     class Tela {
@@ -25,6 +23,20 @@ namespace curso {
             for (int i = 0; i < Program.produtos.Count; i++) {
                 Console.WriteLine(Program.produtos[i]);
             }
+        }
+
+        public static void CadastrarProduto() {
+            Console.WriteLine("Digite os dados do produto:");
+            Console.Write("Código: ");
+            int codigo = int.Parse(Console.ReadLine());
+            Console.Write("Descrição: ");
+            string descricao = Console.ReadLine();
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Produto P = new Produto(codigo, descricao, preco);
+            Program.produtos.Add(P);
+            Program.produtos.Sort();
         }
 
     }
