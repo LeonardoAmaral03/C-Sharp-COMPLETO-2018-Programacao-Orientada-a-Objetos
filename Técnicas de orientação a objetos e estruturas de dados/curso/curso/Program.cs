@@ -6,6 +6,7 @@ namespace curso {
     class Program {
 
         public static List<Produto> produtos = new List<Produto>();
+        public static List<Pedido> pedidos = new List<Pedido>();
 
         static void Main(string[] args) {
 
@@ -45,10 +46,26 @@ namespace curso {
                         }
                         break;
                     case 3:
-
+                        try {
+                            Tela.CadastrarPedido();
+                        }
+                        catch (ModelException e) {
+                            Console.WriteLine("Erro de negócio: " + e.Message);
+                        }
+                        catch (Exception e) {
+                            Console.WriteLine("Erro inesperado: " + e.Message);
+                        }
                         break;
                     case 4:
-
+                        try {
+                            Tela.MostrarPedido();
+                        }
+                        catch (ModelException e) {
+                            Console.WriteLine("Erro de negócio: " + e.Message);
+                        }
+                        catch (Exception e) {
+                            Console.WriteLine("Erro inesperado: " + e.Message);
+                        }
                         break;
                     case 5:
                         Console.WriteLine("Fim do programa!");
