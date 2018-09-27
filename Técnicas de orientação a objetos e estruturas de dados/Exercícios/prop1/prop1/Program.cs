@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using prop1.dominio;
 
 namespace prop1 {
     class Program {
 
         public static List<Artista> artistas = new List<Artista>();
+        public static List<Filme> filmes = new List<Filme>();
 
         static void Main(string[] args) {
 
@@ -30,25 +28,44 @@ namespace prop1 {
                 }
                 catch (Exception e) {
                     Console.WriteLine("Erro inesperado: " + e.Message);
+                    opcao = 0;
                 }
+
+                Console.WriteLine();
 
                 switch (opcao) {
                     case 1:
-                        try {
                             Tela.ListarArtistas();
+                        break;
+                    case 2:
+                        try {
+                            Tela.CadastrarArtista();
                         }
                         catch (Exception e) {
                             Console.WriteLine("Erro inesperado: " + e.Message);
                         }
                         break;
-                    case 2:
-
-                        break;
                     case 3:
-
+                        try {
+                            Tela.CadastrarFilme();
+                        }
+                        catch (ModelException e) {
+                            Console.WriteLine("Erro de negócio: " + e.Message);
+                        }
+                        catch (Exception e) {
+                            Console.WriteLine("Erro inesperado: " + e.Message);
+                        }
                         break;
                     case 4:
-
+                        try {
+                            Tela.MostrarFilme();
+                        }
+                        catch (ModelException e) {
+                            Console.WriteLine("Erro de negócio: " + e.Message);
+                        }
+                        catch (Exception e) {
+                            Console.WriteLine("Erro inesperado: " + e.Message);
+                        }
                         break;
                     case 5:
                         Console.WriteLine("Fim do programa!");
