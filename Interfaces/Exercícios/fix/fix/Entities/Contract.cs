@@ -24,7 +24,7 @@ namespace fix.Entities {
             string s = "";
 
             for (int i = 0; i < Installments.Count; i++) {
-                s += Installments[i].DueDate + " - " + Installments[i].Amount.ToString("F2", CultureInfo.InvariantCulture) + "\n";
+                s += Installments[i].DueDate.ToString("dd/MM/yyyy") + " - " + Installments[i].Amount.ToString("F2", CultureInfo.InvariantCulture) + "\n";
             }
 
             return s;
